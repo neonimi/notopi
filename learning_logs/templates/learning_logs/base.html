@@ -1,0 +1,85 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %}</title>
+	{% bootstrap_css %}
+	{% bootstrap_javascript jquery='full' %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css'%}">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
+
+		<a class="navbar-brand" href="{% url 'learning_logs:index'%}">notopi</a>
+	
+		<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> -->
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+			<a class="nav-link" href="{% url 'learning_logs:topic'%}">トピック一覧</a></li>
+		</ul>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'learning_logs:inquiry' %}">問い合わせ</a>
+			</li>
+			{% if user.is_authenticated %}
+			<li class="nav-item">
+				<span class="navbar-text">こんにちは {{ user.username }}さん</span>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'users:logout' %}">ログアウト</a>
+			</li>
+			{% else %}
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'users:register' %}">ユーザー登録</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'users:login' %}">ログイン</a></li>
+			{% endif %}
+		</ul>
+		</div>
+		
+	</nav>
+	
+	<main role="main" class="container">
+		<div class="pb-2 mb-2 border-bottom">
+		{% block page_header %}{% endblock page_header %}
+		</div>
+
+		{% if messages %}
+		<div class="container">
+			<div class="row">
+				<div class="my-div-style w-100">
+					<ul class="messages" style="list-style: none;">
+						{% for message in messages %}
+						<li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+							{{ message }}
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+
+		<div>
+		{% block content %}{% endblock content %}
+		</div>
+	</main>
+
+	<!-- footer -->
+	<footer>
+		<div class="container">
+			<p class="m-0 text-center small">Copyright &copy; notopi 2021</p>
+		</div>
+	</footer>
+
+{% block script %}{% endblock script %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+	<h1 class="display-4">notopiの説明</h1>
+	
+	<p class="lead"><br>
+		記事の書き込み・閲覧ができる掲示板です。<br>
+		アカウントを作成すれば、誰でもトピックを立てて記録できます。<br>
+		<br>
+		<strong><b>使い方</b></strong><br>
+		新しく学んだこと・趣味・習い事等々・・・好きなトピックについて記録できます。<br>
+		具体的で分かりやすいトピック名は、他の人が見つけやすいです。<br>
+		<br>
+		<strong><b>特徴</b></strong><br>
+		他の人のトピックに投稿できます。<br>
+		自分の記事をまとめて表示できます。<br>
+		<br>
+		<strong><b>注意</b></strong><br>
+		ユーザー名が表示名になります。<br>
+		登録時のユーザー名・パスワードは<b><strong>メモ</strong></b>しましょう。<br>
+		忘れると、再登録になるのです。。<br>
+	</p>
+	
+	{% if not user.is_authenticated %}
+	<a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
+		role="button">使ってみる &raquo;</a>
+	{% else %}
+	<a class="btn btn-lg btn-primary" href="{% url 'learning_logs:topic' %}">新しいトピックをつくる &raquo;</a>
+	{% endif %}
+</div>
+
+{% endblock content%}

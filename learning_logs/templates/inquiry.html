@@ -1,0 +1,44 @@
+{% extends "learning_logs/base.html" %}
+
+{% block title %}お問い合わせ｜notopi{% endblock %}
+
+{% block page_header %}
+	<h2>Contact</h2>
+{% endblock page_header %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="my-div-style">
+			<form method="post">
+				{% csrf_token %}
+
+				{{ form.non_field_errors }}
+
+				{% for field in form %}
+				<div class="group row">
+					<label for="{{ field.id_for_label }}" class="col-sm-4 col-form-label">
+						<strong>{{ field.label_tag }}</strong>
+					</label>
+					<div class="col-sm-8">
+						{{ field }}
+						{{ field.errors }}
+					</div>
+				</div>
+				{% endfor %}
+
+				<div class="offset-sm-4 col-sm-8">
+					<button class="btn btn-primary" type="submit">送信</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- <section>
+	<div>
+		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeLTAcdk7t-poEjcp5rJ6QRrDi51-oUcWpKxQZDi_yUboA2YQ/viewform?embedded=true" width="640" height="673" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+	</div>
+</section> -->
+
+{% endblock content%}
