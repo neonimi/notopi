@@ -8,12 +8,18 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% block title %}{% endblock %}</title>
+
+	<!-- Bootstrap css -->
 	{% bootstrap_css %}
 	{% bootstrap_javascript jquery='full' %}
+
+	<!-- mystyle css -->
 	<link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css'%}">
+	{% block head %}{% endblock %}
 </head>
 
 <body>
+	<div id="wrapper">
 	<nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
 
 		<a class="navbar-brand" href="{% url 'learning_logs:index'%}">notopi</a>
@@ -81,5 +87,7 @@
 	</footer>
 
 {% block script %}{% endblock script %}
+</div>
 </body>
+
 </html>

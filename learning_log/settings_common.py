@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-7dj6o+f(h-asene^o^7legl_3a^rcs*or3g@5o&dwrj^37vk34
 
 INSTALLED_APPS = [
     #マイアプリ
-    'learning_logs',
+    'learning_logs.apps.LearningLogsConfig',
     'users',
     #デフォルト
     'django.contrib.admin',
@@ -121,7 +121,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/ar/web/notopi.work/static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -138,3 +138,6 @@ MESSAGE_TAGS = {
     messages.SUCCESS: 'alert alert-success',
     messages.INFO: 'alert alert-info',
 }
+
+#メディアファイルをアップロードしたときのURL名
+# MEDIA_URL = '/media/'

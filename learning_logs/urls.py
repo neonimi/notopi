@@ -1,9 +1,13 @@
 from django.urls import path, include
 from . import views
+from django.contrib.staticfiles.urls import static
+
+# from . import settings_common, settings_dev
 
 app_name = 'learning_logs'
 urlpatterns = [
 	path('', views.index, name='index'),
+	# path('', views.IndexView.as_view(), name='index'),
 	#全てのトピックを表示する
 	path('topic/', views.topic, name='topic'),
 	#個別トピックの詳細ページ
@@ -21,3 +25,6 @@ urlpatterns = [
 	# 問い合わせ
 	path('inquiry/', views.InquiryView.as_view(),name="inquiry"),
 ]
+
+# 開発サーバーでメディアを配信可能にする設定
+# urlpatterns += static(settings_common.MEDIA_URL, document_root=settings_dev.MEDIA_ROOT)

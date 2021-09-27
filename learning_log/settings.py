@@ -9,12 +9,62 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+#本番運用環境用ファイル
 from .settings_common import *
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# デバッグモード
 DEBUG = False
 
+# 許可するホスト名のリスト
 ALLOWED_HOSTS = ["notopi.work"]
 
 #その他設定（ロギング、静的ファイルの配置場所、メール設定 etc.）
-# ロギング設定（開発用）
+# 静的ファイルの配置場所
+# STATIC_ROOT = '/home/ar/web/notopi.work/static/'
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# MEDIR_ROOT = ''
+
+# ロギング設定（本番用）
+# LOGGING = {
+#     'version': 1, # 1固定
+#     'disable_existing_loggers': False, # 既存ログを無効化
+
+#     # ロガーの設定
+#     'loggers': {
+#         # Djangoが利用するロガー
+#         'django': {
+#             'handlers': ['file'],
+#             'level': 'INFO',
+#         },
+#         # learning_logsアプリケーションが利用するロガー
+#         'learning_logs': {
+#             'handlers': ['file'],
+#             'level': 'INFO',
+#         },
+#     },
+
+#     # ハンドラの設定
+#     'handlers': {
+#         'file': {
+#             'level': 'INFO',
+#             'class': 'logging.Handlers.TimedRotatingFileHandler', # ファイルに出力する
+# 			'filename': [os.path.join(BASE_DIR, 'logs/django.log'),
+#             'formatter': 'prod',
+# 			'when': 'D',# ログテーション間隔の単位（D=日）
+# 			'interval': 1, # ログテーション間隔（1日）
+# 			'backupCount': 7, #保存しておくログファイル数
+#         },
+#     },
+
+#     # フォーマッタの設定
+#     'formatters': {
+#         'prod': {
+#             'format': '\t'.join([
+#                 '%(asctime)s',
+#                 '[%(levelname)s]',
+#                 '%(pathname)s(Line:%(lineno)d)',
+#                 '%(message)s',
+#             ])
+#         },
+#     }
+# }

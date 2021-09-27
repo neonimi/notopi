@@ -20,6 +20,11 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 #その他設定（ロギング、静的ファイルの配置場所、メール設定 etc.）
+STATIC_ROOT = '/home/ar/web/notopi.work/static/'
+
+# メディアファイルの保存場所
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # ロギング設定（開発用）
 LOGGING = {
     'version': 1, # 1固定

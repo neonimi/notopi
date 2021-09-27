@@ -4,15 +4,20 @@ from .models import *
 from .forms import TopicForm, EntryForm, InquiryForm
 from django.http import Http404
 from django.views import generic #クラスベースビュー
-import logging
 from django.urls import reverse_lazy
 from django.contrib import messages
+import logging
+import logging.handlers
 
 logger = logging.getLogger(__name__) #forms.pyに記述するメール送信メソッド呼び出し
+
 
 # Create your views here.
 def index(request):
 	return render(request, 'learning_logs/index.html')
+
+# class IndexView(generic.TemplateView):
+# 	template_name = 'index.html'
 
 def about(request):
 	return render(request, 'learning_logs/about.html')
@@ -24,6 +29,14 @@ def topic(request):
 	topics = Topic.objects.order_by('date_added')
 	context = {'topic': topics}
 	return render(request, 'learning_logs/topic.html', context)
+
+# class TopicView(generic.ListView):
+# 	model = Topic
+# 	template_name = 'topic.html'
+#	paginate_by = 2
+	
+# 	def get_queryset(self):
+# 		topics = Topic.objects.order_by('date_added')
 
 class InquiryView(generic.FormView):
 	template_name = 'inquiry.html'
