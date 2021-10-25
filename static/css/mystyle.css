@@ -11,3 +11,10 @@ footer {
 .mv-div-style {
 	margin-top: 6rem;
 }
+
+/* スマホ用CSSを記述 */
+/* @media screen and (max-width: 768px) {
+	.collapse {
+		display: initial;
+	}
+} */
