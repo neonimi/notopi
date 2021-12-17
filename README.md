@@ -30,16 +30,16 @@ CSRFの脆弱性に関する届出が、ウェブサイト届出全体に占め�
 <img width="350" alt="notopi_register" src="https://user-images.githubusercontent.com/32536597/146487668-dea94f2d-274f-42b5-b545-9ee50aeb3adc.png">
 
 ### ログイン画面
-<img width="350" alt="notopi_login" src="https://user-images.githubusercontent.com/32536597/146487677-7cafcf0e-8437-4b74-8a67-b43914be44c2.png">
+<img width="400" alt="notopi_login" src="https://user-images.githubusercontent.com/32536597/146487677-7cafcf0e-8437-4b74-8a67-b43914be44c2.png">
 
 ### トピック一覧画面
-<img width="350" alt="notopi_topic" src="https://user-images.githubusercontent.com/32536597/146488493-703151ad-6d89-4c16-9733-eded09800617.png">
+<img width="400" alt="notopi_topic" src="https://user-images.githubusercontent.com/32536597/146488493-703151ad-6d89-4c16-9733-eded09800617.png">
 
 ユーザー：learn-test1がログインしました。<br>
 ログインユーザーはトピックを作成できます。
 
 ### 記事一覧画面
-<img width="350" alt="notopi_usertopic" src="https://user-images.githubusercontent.com/32536597/146488516-8a0be3d9-4d08-41e2-bbce-01a04f398774.png">
+<img width="400" alt="notopi_usertopic" src="https://user-images.githubusercontent.com/32536597/146488516-8a0be3d9-4d08-41e2-bbce-01a04f398774.png">
 
 ログインユーザーは、立てたトピックに対して、投稿・編集ができます。
 
