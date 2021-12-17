@@ -42,6 +42,7 @@ CSRFの脆弱性に関する届出が、ウェブサイト届出全体に占め�
 <img width="400" alt="notopi_usertopic" src="https://user-images.githubusercontent.com/32536597/146488516-8a0be3d9-4d08-41e2-bbce-01a04f398774.png">
 
 ログインユーザーは、立てたトピックに対して、投稿・編集ができます。
+自分が投稿した記事にだけ、編集ボタンが表示されています。
 
 ### 記事編集画面
 <img width="350" alt="notopi_edit" src="https://user-images.githubusercontent.com/32536597/146488529-d7591559-bc4b-4fed-b52c-07abd555d4c2.png">
