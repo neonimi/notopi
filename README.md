@@ -1,15 +1,27 @@
 notopi
 
 ## 機能
-ログイン
-ユーザー登録
-トピック作成
-投稿
+トピックを作成し、立てたトピックに対して記事を追加できる掲示板です。
+ログインした人だけ投稿できます。
+
+## セキュリティ対策
+- 常時SSL化
+- CSRF対策
+ログイン機能があり、Cookieを用いたセッション管理を利用しているので、CSRF攻撃による影響を受ける可能性があります。
+CSRFの脆弱性に関する届出が、ウェブサイト届出全体に占める割合は、1パーセント未満と多くありませんが、罠サイトからの攻撃を考慮して対策しました。
 
 ## アクセス制限
 - 閲覧：なし（全員に表示）
 - 投稿する：ユーザー登録者
 - トピック作成する：ユーザー登録者
+
+## 言語・環境
+- 言語/フレームワーク： python/Django
+- DB: sqlite3
+- Webサーバー: Nginx
+- APサーバー: WSGI
+
+公開には、VPSサーバーを使用しています。
 
 ## 見え方
 ### トップ画面
@@ -30,7 +42,7 @@ notopi
 ### 記事一覧画面
 <img width="350" alt="notopi_usertopic" src="https://user-images.githubusercontent.com/32536597/146488516-8a0be3d9-4d08-41e2-bbce-01a04f398774.png">
 
-ログインユーザーのみ立てたトピックに対して、投稿・編集ができます。
+ログインユーザーは、立てたトピックに対して、投稿・編集ができます。
 
 ### 記事編集画面
 <img width="350" alt="notopi_edit" src="https://user-images.githubusercontent.com/32536597/146488529-d7591559-bc4b-4fed-b52c-07abd555d4c2.png">
@@ -45,4 +57,3 @@ notopi
 
 ### ログアウト画面
 <img width="350" alt="notopi_logout" src="https://user-images.githubusercontent.com/32536597/146488466-da0ab5a1-024c-4116-81d0-46874aaa3872.png">
-
