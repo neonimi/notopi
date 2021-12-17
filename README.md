@@ -21,19 +21,16 @@ notopi
 ### ログイン画面
 <img width="350" alt="notopi_login" src="https://user-images.githubusercontent.com/32536597/146487677-7cafcf0e-8437-4b74-8a67-b43914be44c2.png">
 
-### ログアウト画面
-<img width="350" alt="notopi_logout" src="https://user-images.githubusercontent.com/32536597/146488466-da0ab5a1-024c-4116-81d0-46874aaa3872.png">
-
 ### トピック一覧画面
 <img width="350" alt="notopi_topic" src="https://user-images.githubusercontent.com/32536597/146488493-703151ad-6d89-4c16-9733-eded09800617.png">
 
+ユーザー：learn-test1がログインしました。<br>
 ログインユーザーはトピックを作成できます。
 
 ### 記事一覧画面
 <img width="350" alt="notopi_usertopic" src="https://user-images.githubusercontent.com/32536597/146488516-8a0be3d9-4d08-41e2-bbce-01a04f398774.png">
 
-ユーザー：learn-test1がログインしました。
-ログインユーザーのみトピックに対して、投稿・編集ができます。
+ログインユーザーのみ立てたトピックに対して、投稿・編集ができます。
 
 ### 記事編集画面
 <img width="350" alt="notopi_edit" src="https://user-images.githubusercontent.com/32536597/146488529-d7591559-bc4b-4fed-b52c-07abd555d4c2.png">
@@ -44,4 +41,8 @@ notopi
 ### エラー画面(500)
 <img width="350" alt="notopi_error" src="https://user-images.githubusercontent.com/32536597/146488547-7c66e675-84a7-4cb6-ba42-ce3ece2e7cec.png">
 
+エラーが発生した際の画面です。
+
+### ログアウト画面
+<img width="350" alt="notopi_logout" src="https://user-images.githubusercontent.com/32536597/146488466-da0ab5a1-024c-4116-81d0-46874aaa3872.png">
 
