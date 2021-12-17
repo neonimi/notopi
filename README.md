@@ -11,7 +11,7 @@ notopi
 - 投稿：ユーザー登録した人
 - トピック作成：ユーザー登録した人
 
-<img width="892" alt="notopi_top" src="https://user-images.githubusercontent.com/32536597/146487658-9a4d9920-f7cb-4e27-b2b6-d0e554ecb2f0.png">
+<img width="350" alt="notopi_top" src="https://user-images.githubusercontent.com/32536597/146487658-9a4d9920-f7cb-4e27-b2b6-d0e554ecb2f0.png">
 
 <img width="892" alt="notopi_register" src="https://user-images.githubusercontent.com/32536597/146487668-dea94f2d-274f-42b5-b545-9ee50aeb3adc.png">
 
